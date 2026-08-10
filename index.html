@@ -1,192 +1,146 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Günaydın Bitanem 🤍</title>
+<title>Günaydın Bitanemmm ❤️</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3,#a18cd1);
+  color:white;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #24152f, #5b315f, #25162f);
-    color: white;
+.container{
+  width:90%;
+  max-width:500px;
+  text-align:center;
+  padding:35px 20px;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:30px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 15px 40px rgba(0,0,0,.2);
 }
 
-.card {
-    width: 88%;
-    max-width: 430px;
-    padding: 38px 25px;
-    text-align: center;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.2);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 20px 70px rgba(0,0,0,0.4);
-    z-index: 2;
+h1{
+  font-size:38px;
+  margin:10px 0 15px;
 }
 
-.small {
-    font-size: 13px;
-    letter-spacing: 2px;
-    opacity: 0.75;
+p{
+  font-size:20px;
+  line-height:1.6;
 }
 
-h1 {
-    font-size: 36px;
-    margin: 20px 0 12px;
+.hearts{
+  font-size:30px;
+  animation:beat 1.2s infinite;
 }
 
-p {
-    font-size: 17px;
-    line-height: 1.6;
+button{
+  margin-top:20px;
+  padding:15px 25px;
+  border:0;
+  border-radius:30px;
+  background:white;
+  color:#e75480;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-button {
-    border: none;
-    border-radius: 30px;
-    padding: 15px 25px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #693b70;
-    background: white;
-    cursor: pointer;
+#message{
+  display:none;
+  margin-top:25px;
+  font-size:22px;
+  font-weight:bold;
 }
 
-#message {
-    display: none;
+@keyframes beat{
+  50%{transform:scale(1.25)}
 }
 
-.music {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.15);
-    color: white;
-    text-decoration: none;
+.heart{
+  position:fixed;
+  top:-20px;
+  font-size:22px;
+  animation:fall linear forwards;
+  pointer-events:none;
 }
 
-.heart {
-    position: fixed;
-    bottom: -40px;
-    animation: rise linear forwards;
-    pointer-events: none;
-    z-index: 1;
-}
-
-@keyframes rise {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-
-    15% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-115vh) rotate(30deg);
-        opacity: 0;
-    }
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-    <div class="small">SANA ÖZEL BİR SÜRPRİZ 🤍</div>
+  <div class="hearts">❤️ 💗 💕 💖 💗 ❤️</div>
 
-    <h1 id="title">Bir şey var...</h1>
+  <h1>Günaydın Bitanemmm ❤️</h1>
 
-    <p id="intro">
-        Sabah bunu gördüğünde<br>
-        önce aşağıdaki butona bas. 👀
-    </p>
+  <p>
+    Uyandığında yüzünde küçücük de olsa<br>
+    bir gülümseme olsun istedim. 🥹❤️
+  </p>
 
-    <button onclick="surprise()">
-        Tıkla bakalım 🤍
-    </button>
+  <p>
+    Bugünün çok güzel geçsin,<br>
+    çünkü sen güzel bir günü hak ediyorsun. 💕
+  </p>
 
-    <div id="message">
+  <button onclick="surprise()">
+    Bana tıkla ❤️
+  </button>
 
-        <h1>GÜNAYDIIN BİTANEMMM 🤍</h1>
-
-        <p>
-            Uyandığında yüzünde küçücük de olsa<br>
-            bir gülümseme olsun istedim. 🫶🏻
-            <br><br>
-            Umarım bugün senin için<br>
-            çok güzel geçer.
-            <br><br>
-            <b>Şimdi sıra sabah şarkında... 🎶</b>
-        </p>
-
-        <a class="music"
-           href="https://www.youtube.com/results?search_query=Yal%C4%B1n+Son+A%C5%9Fk%C4%B1m"
-           target="_blank">
-            🎵 Son Aşkım'ı aç
-        </a>
-
-    </div>
+  <div id="message">
+    Günaydın bitanemmm 🥹❤️<br>
+    Seni düşündüğümü bil yeter. 💗
+    <br><br>
+    🎵 Son Aşkım — Yalın
+  </div>
 
 </div>
 
 <script>
+function surprise(){
 
-function surprise() {
+  document.getElementById("message").style.display="block";
 
-    document.querySelector("button").style.display = "none";
-    document.getElementById("title").style.display = "none";
-    document.getElementById("intro").style.display = "none";
-    document.querySelector(".small").innerHTML =
-        "BUGÜNÜN İLK SÜRPRİZİ 🤍";
+  for(let i=0;i<30;i++){
+    setTimeout(()=>{
+      const heart=document.createElement("div");
+      heart.className="heart";
+      heart.innerHTML=["❤️","💗","💕","💖","💘"][Math.floor(Math.random()*5)];
+      heart.style.left=Math.random()*100+"vw";
+      heart.style.animationDuration=(3+Math.random()*4)+"s";
+      document.body.appendChild(heart);
 
-    document.getElementById("message").style.display = "block";
+      setTimeout(()=>heart.remove(),7000);
+    },i*80);
+  }
 
-    for (let i = 0; i < 55; i++) {
-
-        setTimeout(function() {
-
-            const heart = document.createElement("div");
-
-            heart.className = "heart";
-
-            const hearts = ["🤍","💗","💕","💖","❤️","🩷"];
-
-            heart.innerHTML =
-                hearts[Math.floor(Math.random() * hearts.length)];
-
-            heart.style.left =
-                Math.random() * 100 + "vw";
-
-            heart.style.fontSize =
-                (16 + Math.random() * 22) + "px";
-
-            heart.style.animationDuration =
-                (4 + Math.random() * 5) + "s";
-
-            document.body.appendChild(heart);
-
-            setTimeout(function() {
-                heart.remove();
-            }, 9000);
-
-        }, i * 100);
-    }
+  window.open(
+    "https://www.youtube.com/watch?v=ERrSFOtSmFY",
+    "_blank"
+  );
 }
-
 </script>
 
 </body>
