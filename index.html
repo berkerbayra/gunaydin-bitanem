@@ -1,146 +1,212 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Günaydın Bitanemmm ❤️</title>
+<title>Sana Özel 🤍</title>
 
 <style>
 *{box-sizing:border-box}
 
 body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow:hidden;
-  font-family:Arial,sans-serif;
-  background:linear-gradient(135deg,#ff758c,#ff7eb3,#a18cd1);
-  color:white;
+    margin:0;
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:Arial,sans-serif;
+    color:white;
+    background:linear-gradient(135deg,#24152f,#743b6b,#d86b91);
 }
 
-.container{
-  width:90%;
-  max-width:500px;
-  text-align:center;
-  padding:35px 20px;
-  background:rgba(255,255,255,.15);
-  border:1px solid rgba(255,255,255,.3);
-  border-radius:30px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 15px 40px rgba(0,0,0,.2);
+.card{
+    width:90%;
+    max-width:430px;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:30px;
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.25);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+    z-index:2;
 }
+
+.screen{display:none}
+.screen.active{display:block}
 
 h1{
-  font-size:38px;
-  margin:10px 0 15px;
+    font-size:34px;
+    margin:15px 0;
 }
 
 p{
-  font-size:20px;
-  line-height:1.6;
-}
-
-.hearts{
-  font-size:30px;
-  animation:beat 1.2s infinite;
+    font-size:18px;
+    line-height:1.6;
 }
 
 button{
-  margin-top:20px;
-  padding:15px 25px;
-  border:0;
-  border-radius:30px;
-  background:white;
-  color:#e75480;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-#message{
-  display:none;
-  margin-top:25px;
-  font-size:22px;
-  font-weight:bold;
-}
-
-@keyframes beat{
-  50%{transform:scale(1.25)}
+    margin-top:20px;
+    padding:14px 25px;
+    border:0;
+    border-radius:30px;
+    background:white;
+    color:#793d70;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 .heart{
-  position:fixed;
-  top:-20px;
-  font-size:22px;
-  animation:fall linear forwards;
-  pointer-events:none;
+    position:fixed;
+    bottom:-40px;
+    pointer-events:none;
+    animation:rise linear forwards;
+    z-index:1;
 }
 
-@keyframes fall{
-  to{
-    transform:translateY(110vh) rotate(360deg);
-    opacity:0;
-  }
+@keyframes rise{
+    to{
+        transform:translateY(-115vh) rotate(35deg);
+        opacity:0;
+    }
+}
+
+.music{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 22px;
+    border-radius:30px;
+    background:white;
+    color:#793d70;
+    text-decoration:none;
+    font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="card">
 
-  <div class="hearts">❤️ 💗 💕 💖 💗 ❤️</div>
+    <!-- 1. AŞAMA -->
+    <div class="screen active" id="screen1">
+        <div style="font-size:45px">🌙</div>
+        <h1>Uyandın mı?</h1>
+        <p>
+            Eğer uyandıysan<br>
+            sana küçük bir sürprizim var. 👀
+        </p>
+        <button onclick="next(2)">Uyandım 🤍</button>
+    </div>
 
-  <h1>Günaydın Bitanemmm ❤️</h1>
+    <!-- 2. AŞAMA -->
+    <div class="screen" id="screen2">
+        <div style="font-size:45px">👀</div>
+        <h1>Bir saniye...</h1>
+        <p>
+            Daha günaydın demedim.<br>
+            Ama önce senden küçük bir ricam var.
+        </p>
+        <button onclick="next(3)">Neymiş? 👀</button>
+    </div>
 
-  <p>
-    Uyandığında yüzünde küçücük de olsa<br>
-    bir gülümseme olsun istedim. 🥹❤️
-  </p>
+    <!-- 3. AŞAMA -->
+    <div class="screen" id="screen3">
+        <div style="font-size:45px">💌</div>
+        <h1>Sadece sen görebilirsin.</h1>
+        <p>
+            Çünkü bunu özellikle<br>
+            senin sabahın için hazırladım. 🤍
+        </p>
+        <button onclick="next(4)">Devam et 💗</button>
+    </div>
 
-  <p>
-    Bugünün çok güzel geçsin,<br>
-    çünkü sen güzel bir günü hak ediyorsun. 💕
-  </p>
+    <!-- 4. AŞAMA -->
+    <div class="screen" id="screen4">
+        <div style="font-size:45px">❤️ 💕 ❤️</div>
+        <h1>GÜNAYDIIN BİTANEMMM 🤍</h1>
+        <p>
+            Umarım bugün gözlerini açtığında<br>
+            yüzünde küçük bir gülümseme oluşmuştur.
+            <br><br>
+            Çünkü benim sabah sürprizim<br>
+            tam olarak buydu. 🫶🏻
+        </p>
+        <button onclick="next(5); hearts()">Son bir şey var... 💕</button>
+    </div>
 
-  <button onclick="surprise()">
-    Bana tıkla ❤️
-  </button>
+    <!-- 5. AŞAMA -->
+    <div class="screen" id="screen5">
+        <div style="font-size:45px">💖</div>
+        <h1>Son bir şey...</h1>
 
-  <div id="message">
-    Günaydın bitanemmm 🥹❤️<br>
-    Seni düşündüğümü bil yeter. 💗
-    <br><br>
-    🎵 Son Aşkım — Yalın
-  </div>
+        <p>
+            Bugün güzel bir gün geçir.<br>
+            Ve arada bir gülümsemeyi unutma.
+            <br><br>
+            <b>Şimdi sabah şarkın hazır. 🎵</b>
+        </p>
+
+        <a class="music"
+           href="https://www.youtube.com/watch?v=ERrSFOtSmFY"
+           target="_blank">
+           🎵 Son Aşkım'ı Aç
+        </a>
+
+        <p style="font-size:15px;margin-top:22px;opacity:.8">
+            🤍 Günaydın bitanemmm 🤍
+        </p>
+    </div>
 
 </div>
 
 <script>
-function surprise(){
 
-  document.getElementById("message").style.display="block";
+function next(number){
 
-  for(let i=0;i<30;i++){
-    setTimeout(()=>{
-      const heart=document.createElement("div");
-      heart.className="heart";
-      heart.innerHTML=["❤️","💗","💕","💖","💘"][Math.floor(Math.random()*5)];
-      heart.style.left=Math.random()*100+"vw";
-      heart.style.animationDuration=(3+Math.random()*4)+"s";
-      document.body.appendChild(heart);
+    document.querySelectorAll(".screen")
+        .forEach(s => s.classList.remove("active"));
 
-      setTimeout(()=>heart.remove(),7000);
-    },i*80);
-  }
-
-  window.open(
-    "https://www.youtube.com/watch?v=ERrSFOtSmFY",
-    "_blank"
-  );
+    document.getElementById("screen"+number)
+        .classList.add("active");
 }
+
+function hearts(){
+
+    const emojis=["❤️","💗","💕","💖","💘","🤍","🩷"];
+
+    for(let i=0;i<60;i++){
+
+        setTimeout(()=>{
+
+            const heart=document.createElement("div");
+
+            heart.className="heart";
+
+            heart.innerHTML=
+                emojis[Math.floor(Math.random()*emojis.length)];
+
+            heart.style.left=
+                Math.random()*100+"vw";
+
+            heart.style.fontSize=
+                (16+Math.random()*25)+"px";
+
+            heart.style.animationDuration=
+                (4+Math.random()*5)+"s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(()=>{
+                heart.remove();
+            },9000);
+
+        },i*80);
+    }
+}
+
 </script>
 
 </body>
